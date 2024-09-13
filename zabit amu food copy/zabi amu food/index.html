@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="/product.css" />
+    <link rel="stylesheet" type="text/css" href="/footer.css" />
+    <script src="index.js" type="module"></script> 
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <div class="menu">
+            <div class="menu_name">Products</div>
+            <div class="menu_name">About Us</div>
+            <div class="menu_name icon-Cart" id="openOrderBtn" >
+                <p>Order</p>
+                <img src="/171550_cart_icon.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="logo">
+            <a  href="">
+                <img src="/amuLogo.png" alt="Company Logo">
+                
+            </a>
+        </div>
+
+        <div class="socials">
+            <div> 
+                <a href=mailto:"">
+                    <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/561/561188.png" alt="Email">
+                    <p>Email</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://wa.me/613452735?text=is%20this%20working">
+                    <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                    <p>WhatsApp</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-width">
+
+        <div id="orderModal" class="modal">
+            <div class="modal-content" >
+                <span class="close" id="close">&times;</span>
+                <h2>Your Order Summary</h2>
+                <div class="orderDetails" id="orderDetails">
+                    <!-- Order details will go here -->
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div id="typeOptions" class="modal">
+            <div class="modal-content" >
+                <span class="close" id="closeTypeOptions">&times;</span>
+                <h2>Your Order Summary</h2>
+
+                <div class="orderDetails orderTypeOptions" id="orderDetails">
+                    <button onclick="placeOrder('email')" class="buttonSumbit">Email</button>
+                    <p>or</p>
+                    <button onclick="placeOrder('whatsApp')" class="buttonSumbit">WhatsApp</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="productAmountDetail" class="modal">
+            <div></div>
+        </div>
+
+
+        <main>
+            <div class="mainImage">
+                <img src="/organic-products-hero.png">
+            </div>
+    
+            <div class="hero-texts">
+                <div class="leafLogo">
+                    <img src="/logo-leaf-new.png" alt="leaf logo">
+                </div>
+                <div class="small-text">Best Quality Products
+                </div>
+                <div class="hero-text">Join The Organic Movement!</div>
+                <div class="smaller-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+    
+            </div>    
+        </main>
+        
+        <div class="tab-container" id="tab-containers">
+            <div class="tabs" id="tabs">
+               
+            </div>
+            
+        </div>
+
+
+
+        <div class="fixed-circle-button" id="openOrderBtn2">
+            <img src="/171550_cart_icon.png" alt="Icon">
+        </div>
+        
+        
+
+    </div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>We are a company dedicated to providing the best products and services to our customers. Our mission is to create value and make a difference in the communities we serve.</p>
+        </div>
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 1234 Street Name, City, Country</p>
+            <p><i class="fas fa-phone-alt"></i> +123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> info@example.com</p>
+        </div>
+        <div class="footer-section social">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+    
+</body>
+
+</html>

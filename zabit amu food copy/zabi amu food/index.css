@@ -1,0 +1,322 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F7F6F2;
+}
+
+::selection {
+    background-color: #8BC34A;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #8BC34A;
+    color: #ffffff;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    color: #45a049;
+}
+.fixed-circle-button {
+    position: fixed;
+    bottom: 20px;  /* Adjusts the position from the bottom of the screen */
+    left: 20px;    /* Adjusts the position from the left side of the screen */
+    width: 50px;   /* Diameter of the circle */
+    height: 50px;  /* Diameter of the circle */
+    background-color: #99d45a;  /* Background color of the button */
+    border-radius: 50%;  /* Makes the div circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Optional: Adds a shadow for depth */
+    cursor: pointer;
+    z-index: 1000;  /* Ensures it appears above other content */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fixed-circle-button img {
+    width: 50%;   /* Adjusts the size of the icon relative to the button */
+    height: 50%;
+    object-fit: contain;  /* Ensures the icon maintains its aspect ratio */
+}
+
+.fixed-circle-button:hover {
+    transform: scale(1.1);  /* Grows slightly when hovered */
+    background-color: #45a049;  /* Changes color on hover */
+}
+
+.menu, .socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: ce;
+}
+
+.menu_name, .socials div {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.icon-Cart img {
+    width: 15%;
+    height: 15%;
+}
+
+.icon-Cart {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;   
+}
+
+.icon-Cart p {
+    display: flex;
+    align-items: center;
+}
+
+.menu_name:hover, .socials div:hover {
+    color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.socials div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #608536;
+}
+
+/* Main content styles */
+main {
+    margin-top: 50px; /* To account for fixed header */
+    padding: 20px 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row-reverse;
+
+    gap: 3rem;
+}
+
+.mainImage {
+    width: 100%;
+    max-height: 600px;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.mainImage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mainImage:hover img {
+    transform: scale(1.03);
+}
+
+.hero-texts {
+    text-align: left;
+}
+
+.leafLogo {
+    margin-bottom: 20px;
+}
+
+.leafLogo img {
+    width: 50px;
+    height: auto;
+}
+
+.small-text {
+    font-size: 18px;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.smaller-text {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 1px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5%;
+        display: flex;
+    }
+
+    .menu, .socials {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .menu_name, .socials div {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .hero-texts {
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu, .socials {
+        gap: 0.3rem;
+        margin: auto;
+        
+    }
+    .socials{
+        gap: 3rem;
+       
+
+    }
+
+    .menu_name {
+        font-size: 0.9rem;
+    }
+
+    .icon-Cart img {
+        width: 50%;
+        height: 50%;
+        position: relative;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .small-text {
+        font-size: 1.2rem;
+    }
+
+    .products {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .product {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .icon-Cart p, .socials a p {
+        display: none;
+    }
+    .icon-Cart{
+        display: flex;
+        justify-content: center;
+        width:30%;
+    }
+    .modal-content {
+        width: 90%;
+    }
+    .logo{
+        width: 50%;
+    }
+}
